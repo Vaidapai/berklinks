@@ -16,24 +16,42 @@
 'use strict';
 
 // Shortcuts to DOM Elements.
-var signUpButton = document.getElementById('signup-button')
+var signUpButton = document.getElementById('submitButton')
 var loginButton = document.getElementById('login-button')
-var signInWithGoogleButton = document.getElementById('signInWithGoogleButton')
+var longinLink = document.getElementById('login-link')
+var contactUs = document.getElementById("contact-link")
+var about = contactUs
+var gbutton = document.getElementById("gSignIn")
+var email = document.getElementById("input-email")
+var pass = document.getElementById("input-pass")
 
 //Login and signup button redirect
 loginButton.onclick = function () {
   location.href = "login.html"
 }
 
-
-
-function signIn() {
-
-  // Sign into Firebase using popup auth & Google as the identity provider.
-  var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(provider);
+contactUs.onclick = function (){
+  location.href = "contact_us.html"
 }
-signInWithGoogleButton.onclick = signIn()
+longinLink.onclick = function (){
+  location.href = "login.html"
+}
+
+
+
+signUpButton.onclick = function () {
+  firebase.auth().createUserWithEmailAndPassword(email.value, pass.value)
+  .then((user) => {
+    // Signed in 
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ..
+  });
+}
+
 // Signs-out of Friendly Chat.
 function signOut() {
   // Sign out of Firebase.
@@ -204,66 +222,8 @@ function createAndInsertMessage(id, timestamp) {
   return div;
 }
 
-// Displays a Message in the UI.
-function displayMessage(id, timestamp, name, text, picUrl, imageUrl) {
-  var div = document.getElementById(id) || createAndInsertMessage(id, timestamp);
-
-  // profile picture
-  if (picUrl) {
-    div.querySelector('.pic').style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(picUrl) + ')';
-  }
-
-  div.querySelector('.name').textContent = name;
-  var messageElement = div.querySelector('.message');
-
-  if (text) { // If the message is text.
-    messageElement.textContent = text;
-    // Replace all line breaks by <br>.
-    messageElement.innerHTML = messageElement.innerHTML.replace(/\n/g, '<br>');
-  } else if (imageUrl) { // If the message is an image.
-    var image = document.createElement('img');
-    image.addEventListener('load', function() {
-      messageListElement.scrollTop = messageListElement.scrollHeight;
-    });
-    image.src = imageUrl + '&' + new Date().getTime();
-    messageElement.innerHTML = '';
-    messageElement.appendChild(image);
-  }
-  // Show the card fading-in and scroll to view the new message.
-  setTimeout(function() {div.classList.add('visible')}, 1);
-  messageListElement.scrollTop = messageListElement.scrollHeight;
-  messageInputElement.focus();
-}
-
-// Enables or disables the submit button depending on the values of the input
-// fields.
-function toggleButton() {
-  if (messageInputElement.value) {
-    submitButtonElement.removeAttribute('disabled');
-  } else {
-    submitButtonElement.setAttribute('disabled', 'true');
-  }
-}
 
 
-
-
-
-// Saves message on form submit.
-messageFormElement.addEventListener('submit', onMessageFormSubmit);
-signOutButtonElement.addEventListener('click', signOut);
-signInButtonElement.addEventListener('click', signIn);
-
-// Toggle for the button.
-messageInputElement.addEventListener('keyup', toggleButton);
-messageInputElement.addEventListener('change', toggleButton);
-
-// Events for image upload.
-imageButtonElement.addEventListener('click', function(e) {
-  e.preventDefault();
-  mediaCaptureElement.click();
-});
-mediaCaptureElement.addEventListener('change', onMediaFileSelected);
 
 // initialize Firebase
 initFirebaseAuth();
