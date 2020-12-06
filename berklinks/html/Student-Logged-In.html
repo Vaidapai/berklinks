@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Course Details</title>
+    <link rel="stylesheet" href="..\assets\css\Student-Logged-In.css">
+</head>
+<body>
+   
+    <h1 class="My-Classes"> My Classes and Appointments</h1>
+    <div class="container">
+        <div class="Filter-Bar">
+
+        </div>
+    
+        <div class="ClassBlocks">
+            <div class="Class-Block-1">   
+                <input type="text" value="Class/Class-Appointment-Name" class="Class-Appointment-Name" id="Class-1-Name">
+        
+                <p class="CourseCode" id="Class-1-Course-Code">Course Code: 12345</p>
+                <div class="links">
+                    <div class=link id="LectureZoom">
+        
+                        <label for="Lecture Zoom" class="Lecture-Zoom">Lecture Zoom:</label>
+                        <input type="text" placeholder="Zoom Link" value="https://berkeley.zoom.us/123456789" class="Office-Hours-Zoom">
+            
+                        <input type="text" placeholder= "Days of week (ex:M, T, R)" value="M, W, F" id="LectureZoomDay">
+            
+                        <label for="Lecture-ZoomStartTime"> Start Time:</label>
+                        <input type="time" id="Lecture-ZoomStartTime">
+            
+                        <label for="Lecture-ZoomEndTime" class="">End Time:</label>
+                        <input type="time" id="Lecture-ZoomEndTime">
+                        
+                    </div>
+            
+                    <div class="link" id="OH-Zoom">
+                        <label for="Office-Hours Zoom" class="OH-Zoom">OH Zoom:</label>
+                        <input type="text" placeholder="Zoom Link" value="https://berkeley.zoom.us/123456789" class="Office-Hours-Zoom">
+                
+                        <input type="text" placeholder= "Days of week (ex:M, T, R)" value="M, W, F" id="LectureZoomDay">
+                        
+                        <label for="OH-ZoomStartTime"> Start Time:</label>
+                        <input type="time" id="OH-ZoomStartTime">
+            
+                        <label for="OH-ZoomEndTime" class="">End Time:</label>
+                        <input type="time" id="OH-ZoomEndTime">   
+                    </div>
+                </div>
+                
+                
+                <button id="Add-Course1-Details" class="Add-Course-Details">Add Course Details</button>
+        
+                <div class="imageSelector">
+                    <label for="ChooseImage">Click to Add Course Image</label>
+                    <input type="file" id="ChooseImage">
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html> 

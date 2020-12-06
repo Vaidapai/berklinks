@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../assets/css/signup_style.css">
+        <link href = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,700" rel="stylesheet">
+    </head>
+    <body>
+        <header id="navbar">
+            <div id="navbar-content">
+                <div id="left-navbar">
+                    <a href="#home"><img height="50" src="../assets/img/logo.svg"></a>
+                    <h3> BerkLinks </h3>
+                </div>
+                <div id="right-navbar">
+                    <a id="about-link" href="#first">About</a>
+                    <a id="contact-link" href="#second">Contact</a>
+                    <button id="login-button"> Login </button>
+                    <a href="#signup"><button id="signup-button"> Sign Up </button></a>
+                </div>
+            </div>
+        </header>
+        <div class= "main">
+            <form class="form-login">
+                <h1>Sign Up</h1>
+                <input type="text" id="input-user" class="form-control" placeholder="Username" required autofocus>
+                <input type="email" id="input-email" class="form-control" placeholder="Email" required autofocus>
+                <input type="password" id="input-pass" class="form-control" placeholder="Password" required autofocus>
+                <input type="password" id="input-confirmpass" class="form-control" placeholder="Confirm Password" required autofocus>
+                <button type="submit" id="submitButton">Sign Up</button>
+                <p class="smaller">Or</p>
+                <div class="g-signin" id="">
+                    <a href="#g-signinlink"><imggSignIn height="40" id= "gbutton" src="../assets/img/btn_google_signin_dark_normal_web2.png"></a>
+                </div>
+                <p class="smaller">Already a member? <a href="#login" id="login-link">Login</a></p>
+            </form>
+            
+        </div>
+        <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+<script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+<script src="/__/firebase/7.24.0/firebase-storage.js"></script>
+<script src="/__/firebase/7.24.0/firebase-messaging.js"></script>
+<script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+<script src="/__/firebase/7.24.0/firebase-performance.js"></script>
+<script src="/__/firebase/init.js"></script>
+    <script src="../assets\scripts\signup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF48B;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  margin-bottom: 1em;
+ 
+}
+
+#navbar {
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+#navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+#left-navbar{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#right-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 25em;
+}
+
+.Contact {
+  font-size: 75px;
+}
+
+.row {
+  padding: 0 16px;
+  text-align: center;
+}
+
+
+button {
+  color: black;
+  background: white;
+  padding: 0.5em 1.5em;
+  border: 1px solid #000000;
+  margin: 0 0.4em 0.4em 0;
+  border-radius: 0.7em;
+  cursor: pointer;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+button:hover {
+  background: #e8e7e6;
+}
+
+#signup-button {
+  background: #FFF48B;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+

@@ -1,0 +1,127 @@
+#logo {
+    height: 1em;
+    width: 1em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF48B;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+a {
+	font-size: 16px;
+	font-weight: 600;
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.form-login {
+    margin-top: 80px;
+    margin-left: 30em;
+    margin-right: 30em;
+    padding-bottom: 2em;
+    background-color: white;
+    border-radius: 20px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#navbar {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+  
+#navbar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+  
+#left-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 10em;
+}
+
+#right-navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 25em;
+}
+
+button {
+    color: black;
+    background: white;
+    padding: 0.5em 1.5em;
+    border: 1px solid #000000;
+    margin: 0 0.4em 0.4em 0;
+    border-radius: 0.7em;
+    cursor: pointer;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-weight: 900;
+}
+  
+button:hover {
+    background: #e8e7e6;
+}
+  
+#signup-button {
+    background: #FFF48B;
+}
+
+input {
+    font-family: Source Sans Pro;
+    background: #c4c4c4;
+    margin-bottom: 20px;
+    width: 300%;
+    box-sizing: border-box;
+    border: grey;
+    border-radius: .5em;
+    display: flex;
+    margin-left: -100px;
+    margin-right: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+#pass {
+    margin-bottom: 1em;
+}
+
+#signup {
+    margin-left: 3px;
+}
+
+#signup:hover {
+    margin-left: 3px;
+    text-decoration: underline;
+}
+
+#gbutton:hover {
+    border-color: black;
+}
