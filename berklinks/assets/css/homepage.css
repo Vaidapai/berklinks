@@ -23,9 +23,18 @@ h2 {
 
 img {
 	margin-bottom: 1em;
+  border: 1px solid black;
+  border-radius: 0.7em;
 }
 
 /* top navigation bar */
+
+#logo {
+  margin-top: 1em;
+  margin-right: 1em;
+  border: none;
+}
+
 #navbar {
   height: 80px;
   background-color: white;
@@ -72,13 +81,17 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+}
+
+#splash-img {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #image1 {
   width: 85%;
   height: auto;
-  padding-left: 80px;
 }
 
 #learn-button {
@@ -127,7 +140,7 @@ img {
 }
 
 #image5 {
-  width: 80%;
+  width: 70%;
   height: auto;
 }
 
